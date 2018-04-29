@@ -107,11 +107,13 @@ public class WarframesAdapter extends RealmRecyclerViewAdapter<Warframes> {
                 final EditText editTitle = (EditText) content.findViewById(R.id.title);
                 final EditText editHealth = (EditText) content.findViewById(R.id.health);
                 final EditText editEnergy = (EditText) content.findViewById(R.id.energy);
+                final EditText editDescription = (EditText) content.findViewById(R.id.Description);
                 final EditText editThumbnail = (EditText) content.findViewById(R.id.thumbnail);
 
                 editTitle.setText(warframes.getTitle());
                 editHealth.setText(warframes.getHealth());
                 editEnergy.setText(warframes.getEnergy());
+                editDescription.setText(warframes.getDescription());
                 editThumbnail.setText(warframes.getImageUrl());
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
@@ -127,6 +129,7 @@ public class WarframesAdapter extends RealmRecyclerViewAdapter<Warframes> {
                                 results.get(position).setTitle(editTitle.getText().toString());
                                 results.get(position).setHealth(editHealth.getText().toString());
                                 results.get(position).setEnergy(editEnergy.getText().toString());
+                                results.get(position).setDescription(editDescription.getText().toString());
                                 results.get(position).setImageUrl(editThumbnail.getText().toString());
 
                                 realm.commitTransaction();
@@ -173,7 +176,7 @@ public class WarframesAdapter extends RealmRecyclerViewAdapter<Warframes> {
             textTitle = (TextView) itemView.findViewById(R.id.text_warframes_name);
             textHealth = (TextView) itemView.findViewById(R.id.text_warframes_health);
             textEnergy = (TextView) itemView.findViewById(R.id.text_warframes_energy);
-            textDescription = (TextView) itemView.findViewById(R.id.text_books_description);
+            textDescription = (TextView) itemView.findViewById(R.id.text_warframes_description);
             imageBackground = (ImageView) itemView.findViewById(R.id.image_background);
         }
     }

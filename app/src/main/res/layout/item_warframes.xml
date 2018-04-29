@@ -4,7 +4,7 @@
     android:id="@+id/card_warframes"
     style="@style/AppTheme.Card.Margins"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="300px">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,6 +16,36 @@
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|start" />
+
+        <LinearLayout
+            android:layout_width="62dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewName"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="Name:" />
+
+            <TextView
+                android:id="@+id/textViewHealth"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="Health:" />
+
+            <TextView
+                android:id="@+id/textViewEnergy"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:text="Energy:" />
+
+            <TextView
+                android:id="@+id/textViewDescription"
+                android:layout_width="match_parent"
+                android:layout_height="31dp"
+                android:text="Info:" />
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/layout_partner"
@@ -41,8 +71,8 @@
                 android:layout_height="32dp"
                 android:paddingLeft="@dimen/margin_large"
                 android:paddingRight="@dimen/margin_large"
-                android:textSize="@dimen/text_size_normal"
                 android:textColor="#e50000"
+                android:textSize="@dimen/text_size_normal"
                 android:textStyle="italic" />
 
             <TextView
@@ -51,21 +81,16 @@
                 android:layout_height="32dp"
                 android:paddingLeft="@dimen/margin_large"
                 android:paddingRight="@dimen/margin_large"
-                android:textSize="@dimen/text_size_normal"
                 android:textColor="#00bbca"
-                android:textStyle="italic"  />
+                android:textSize="@dimen/text_size_normal"
+                android:textStyle="italic" />
 
             <TextView
-                android:id="@+id/text_books_description"
+                android:id="@+id/text_warframes_description"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin_small"
+                android:layout_height="300dp"
                 android:maxLines="2"
-                android:paddingBottom="@dimen/margin_normal"
-                android:paddingLeft="@dimen/margin_large"
-                android:paddingRight="@dimen/margin_large"
-                android:paddingTop="@dimen/margin_small"
-                android:textSize="@dimen/text_size_normal" />
+                android:textSize="11sp" />
 
         </LinearLayout>
     </LinearLayout>

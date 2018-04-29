@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 final EditText editTitle = (EditText) content.findViewById(R.id.title);
                 final EditText editHealth = (EditText) content.findViewById(R.id.health);
                 final EditText editEnergy = (EditText) content.findViewById(R.id.energy);
+                final EditText editDescription = (EditText) content.findViewById(R.id.Description);
                 final EditText editThumbnail = (EditText) content.findViewById(R.id.thumbnail);
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
@@ -87,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
                                 warframes.setTitle(editTitle.getText().toString());
                                 warframes.setHealth(editHealth.getText().toString());
                                 warframes.setEnergy(editEnergy.getText().toString());
+                                warframes.setDescription(editDescription.getText().toString());
                                 warframes.setImageUrl(editThumbnail.getText().toString());
 
                                 if (editTitle.getText() == null || editTitle.getText().toString().equals("") || editTitle.getText().toString().equals(" ")) {
